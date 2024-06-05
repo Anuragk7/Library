@@ -28,12 +28,12 @@ function SearchBar() {
            // cb(data);
             let arr = [];
           
-            data = data.docs
+            let data1 = data.docs
             for (let i=0; i<10; i++){
                 
-                arr.push({title: data[i].title, author: data[i].author_name, isbn: data[i].isbn[0], year: data[i].publish_year[0], rating: data[i].ratings_average + "/5"})
+                arr.push({title: data1[i].title, author: data1[i].author_name, isbn: data1[i].isbn[0], year: data1[i].first_publish_year, rating: data1[i].ratings_average + "/5"})
             }
-            setResults(arr)
+            cb(arr)
            
             
         } catch (error) {

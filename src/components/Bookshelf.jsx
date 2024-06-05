@@ -1,38 +1,35 @@
 import React from 'react';
 import BookCard from './Book';
-import debounce from 'lodash.debounce';
+import { Link } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 
 const Bookshelf = () => {
-    // const [query, setQuery] = useState('');
-    // const [results, setResults] = useState([]);
+  
+    const [results, setResults] = useState([])
+    const storedBooks = localStorage.getItem('books');
 
-    // const fetchData = async (query, cb) => {
-    // const res = await fetchSearchResults(query);
-    //   cb(res);
-    // };
-    // const debouncedFetchData = debounce((query, cb) => {
-    // fetchData(query, cb);
-    // }, 500);
-    
+    useEffect(()=> {
+        let books = storedBooks ? JSON.parse(storedBooks) : [];
+        setResults(books)
+        console.log(results)
+   },[])
+
    
-
-    // useEffect(() => {
-    // debouncedFetchData(query, res => {
-    // setResults(res);
-    // });
-    // }, [query]);
-
+    
   return (
     <div>
-        HEllo
-      {/* <div>
-      <BookCard author = "me" edition = "10" year = "2002" />
-      <BookCard author = "me" edition = "10" year = "2002" />
-      <BookCard author = "me" edition = "10" year = "2002" />
-      <BookCard author = "me" edition = "10" year = "2002" />
-      <BookCard author = "me" edition = "10" year = "2002" />
-    </div> */}
+         <div className='bg-black text-center p-1'>
+            <button  className="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-800 transition"><Link to = "/">Search Books</Link></button>
+        </div>
+        {
+                    results.map((m, index) => {
+                        console.log(m)
+                        if (m.author)return (
+                           
+                            <BookCard key = {index} details = {m} />
+                        );
+                    })
+                }
     </div>
   );
 };
