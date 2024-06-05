@@ -3,9 +3,13 @@
 **Live Deployed on Vercel** https://library-gamma-eight.vercel.app/
 
 # Functionality
+
 **Debounced Search:** Uses lodash.debounce to debounce the search input, reducing API requests during rapid typing.
+
 **Fetching Data:** Performs asynchronous fetch to the Open Library API, processes the response to extract book details.
+
 **Search Trigger:** Handles search trigger on input change or search button click using useEffect and debouncedFetchData.
+
 **Rendering Results:** Displays loading indicator during search and renders BookCard components for search results.
 
 
