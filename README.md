@@ -1,4 +1,4 @@
-**Project for Marquee Investments Internship Assessment**
+**Project for Marquee Equity Internship Assessment**
 
 **Live Deployed on Vercel** https://library-gamma-eight.vercel.app/
 
