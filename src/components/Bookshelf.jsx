@@ -17,7 +17,7 @@ const Bookshelf = () => {
    
     
   return (
-    <div>
+    <div className='bg-black'>
          <div className='bg-black text-center p-1'>
             <button  className="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-800 transition"><Link to = "/">Search Books</Link></button>
         </div>

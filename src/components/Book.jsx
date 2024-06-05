@@ -35,7 +35,7 @@ const BookCard = (props) => {
     const updatedBooks = books.filter(book => book.isbn !== details.isbn);
     localStorage.setItem('books', JSON.stringify(updatedBooks));
     setIsAdded(false);
-    alert('Book removed from your bookshelf!');
+    
   }
 
   return (
