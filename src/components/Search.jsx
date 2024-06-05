@@ -95,7 +95,7 @@ function SearchBar() {
                         );
                     })
                 )}
-            <h1 className="text-white">Marquee Investments Assignments By Anurag Khugshal</h1>
+            <h1 className="text-white text-center">Marquee Investments Assignments By Anurag Khugshal</h1>
 
             </div>
         </div>
