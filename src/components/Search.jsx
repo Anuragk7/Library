@@ -95,6 +95,7 @@ function SearchBar() {
                         );
                     })
                 )}
+              <h1 classname = "text-white">Marquee Investments Assignments</h1>
             </div>
         </div>
     );
